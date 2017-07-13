@@ -1,0 +1,23 @@
+<div>
+  <h1>
+    Course Name: {{name}}
+  </h1>
+  <h1 *ngIf="online"> Onclass Class Available</h1>
+   <h1 [hidden]="online"> Onclass Class Available Hidden</h1>
+  <h2>Topics:</h2>
+    <ol>
+        <li *ngFor="let t of topics">
+            {{t}}
+        </li>
+    </ol>
+    Add New Topic: <input type="text" #topic>
+    <button (click)="addTopic(topic.value)">Add Topic</button>
+    <button (click)="clearTopic()">Clear Topic</button>
+
+    <div [ngSwitch]="mode">
+        <h1  *ngSwitchCase="'f'">Flight {{flight}} </h1>
+        <h2  *ngSwitchCase="'t'">Train  {{train}} </h2>
+        <h3  *ngSwitchDefault>Private Transport </h3>
+    </div>
+</div>
+
