@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.big{
+    font-size:40px;
+}
+.red{
+    color:red;
+}
+.border{
+    border:1px solid #ccc;
+}

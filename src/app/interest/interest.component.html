@@ -1,0 +1,11 @@
+<h2>Interest</h2>
+Enter Amount:
+<input type="text" [(ngModel)]="amount"><br><br>
+Enter Rate:
+<input type="text" [(ngModel)]="rate"><br>
+
+
+<br>
+
+<div *ngIf="amount>0 && rate>0">Interest : {{amount * rate /100 | currency:'INR':true}}</div><br>
+<button (click)="clearAll()">Clear All</button>
